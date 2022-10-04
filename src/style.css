@@ -1,0 +1,17 @@
+body{
+    background: rgb(232,232,233);
+    background: linear-gradient(3deg, rgba(232,232,233,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.divColor{
+    height: 200px;
+    width: 200px;
+}
+
+.button1{
+    display: flex;
+    margin: auto;
+}
+#root{
+    min-height: 100vh;
+}
