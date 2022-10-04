@@ -15,3 +15,10 @@ body{
 #root{
     min-height: 100vh;
 }
+
+
+.widthCard{
+    width: 18rem;
+   
+}
+

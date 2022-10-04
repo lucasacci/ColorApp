@@ -32,12 +32,20 @@ export const Form = () => {
   
   }
 
+  const deleteCard = (nombre) =>{
+
+    console.log(nombre);
+
+    let nuevoArray = data.filter((x) => x.color !== nombre.color);
+
+    setData(nuevoArray);
+  }
 
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3 row bg-dark d-flex align-items-center  justify-content-center p-1">
+        <div className="mb-3 row  d-flex align-items-center  justify-content-center p-1">
           <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-3">
             <input
               type="color"
@@ -49,7 +57,7 @@ export const Form = () => {
             />
           </div>
           <div className="col-12 col-md-6 col-lg-6">
-            <label className="form-label text-light ">Ingrese un color</label>
+            <label className="form-label  ">Ingrese un color</label>
             <input
               type="text"
               onChange={(e)=> setTextColor(e.target.value)}
@@ -64,7 +72,7 @@ export const Form = () => {
           </div>
         </div>
       </form>
-      {/* <Card arregloColors={arregloColors} deleteColor={deleteColor} /> */}
+      <Card data={data} deleteCard={deleteCard}/>
     </>
   );
 };
