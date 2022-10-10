@@ -6,7 +6,7 @@ export const Form = () => {
   const [color, setColor] = useState("#000000")
   const [textColor, setTextColor] = useState("")
 
-   const dataLS = JSON.parse(localStorage.getItem("data") || []);
+   const dataLS = JSON.parse(localStorage.getItem("data")) || [];
   
   const [data, setData] = useState(dataLS);
 
@@ -16,7 +16,7 @@ export const Form = () => {
 
   }, [data]);
   
-
+  console.log(data);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
